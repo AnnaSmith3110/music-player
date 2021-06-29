@@ -8,6 +8,10 @@ const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
 const repeat = document.querySelector("#repeat");
 const shuffle = document.querySelector("#shuffle");
+const menu = document.querySelector("#menu");
+const close = document.querySelector("#close");
+const add = document.querySelector("#add");
+const playlist = document.querySelector(".my-playlist");
 const currentSong = document.querySelector("#currentSong");
 const maxSong = document.querySelector("#maxSong");
 const ct = document.querySelector("#ct");
@@ -40,7 +44,10 @@ let myPlayList = [];
   progress.addEventListener("change", changeProgress);
   repeat.addEventListener("click", repeatSong);
   shuffle.addEventListener("click", shuffleSong);
-  
+  add.addEventListener("click", addSong);
+  menu.addEventListener("click", open);
+  close.addEventListener("click", closePlaylist);
+ 
   //declare functions
   function playPause()
   {
@@ -106,6 +113,41 @@ function shuffleSong()
 {
   
 }
+
+function open()
+{
+  if(playlist.style.display == "none") {
+    playlist.style.display = "flex";
+  } else {
+    playlist.style.display = "none";
+  }
+}
+
+function closePlaylist()
+{
+  playlist.style.display = "none";
+}
+
+
+function addSong()
+{
+  let choosenSong = audio.getAttribute("src");
+  if(songSrc.includes(choosenSong)) {
+    let index = songSrc.indexOf(choosenSong);
+    let choosenThumbnail = songThumbnail[index];
+    let choosenTitle = songTitle[index];
+    let choosenArtist = songArtist[index];
+    myPlayList.push(choosenSong);
+    
+        row.innerHTML = myPlayList;
+      
+    console.log(myPlayList);
+    console.log(index);
+  } else {
+    console.log("no");
+  }
+}
+
 
 function updateProgressValue()
 {
