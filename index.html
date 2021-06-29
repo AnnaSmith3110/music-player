@@ -1,0 +1,27 @@
+<div class="app">
+  <header>
+    <p1 id="playlist-count"><span id="currentSong">x</span> of <span id="maxSong">max</span>
+    </p1>
+   </header>
+  <div class="thumbnail"></div>
+  <div class="now-playing">
+    <h id="title">title</h>
+    <p id="artist">artist</p>
+  </div>
+  <input id="progress" type="range" min="0" max="" value="0"/>
+  <div class="controls">
+    <div id="ct">ct</div>
+    <ion-icon id="previous" name="play-skip-back-sharp"></ion-icon>
+    <ion-icon id="play" name="play-circle"></ion-icon>
+    <ion-icon id="next" name="play-skip-forward-sharp"></ion-icon>
+    <div id="dt">dt</div>
+  </div>
+  <footer>
+    <ion-icon id="repeat" name="repeat"></ion-icon>
+    <ion-icon id="add" name="add-circle"></ion-icon>
+    <ion-icon id="shuffle" name="shuffle"></ion-icon>
+  </footer>
+</div>
+<audio id="audio">
+  <source src="" type="audio/mpeg">
+</audio>
