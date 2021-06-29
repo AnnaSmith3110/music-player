@@ -74,6 +74,64 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+#white-space {
+  width: 30px;
+}
+.my-playlist {
+  position: absolute;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 450px;
+  width: 300px;
+  background: var(--app-bg);
+  display: none;
+  z-index: 1;
+}
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  width: 100%;
+}
+.row:nth-child(1)
+{
+  height: 40px;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.row:nth-child(2)
+{
+  height: 150px;
+  justify-content: space-around;
+ 
+}
+#close {
+  margin: 10px;
+}
+.title {
+  margin: 10px;
+  width: 50%;
+  height: 100%;
+  font-size: 1.8em;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center;
+}
+#music-note {
+  font-size: 2em;
+  background: var(--play-icon);
+  color: inherit;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow:  5px 5px 10px #7655bc,
+             -5px -5px 10px #a073fe;  
+}
+
 .thumbnail {
   height: 230px;
   width: 200px;
