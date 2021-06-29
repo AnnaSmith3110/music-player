@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+:root {
+  --bg: #ffffff;
+  --app-bg: linear-gradient(to bottom, #17171f, #16161e);
+  --footer-bg: #1e1e26;
+  --h: #e8e8e8;
+  --p: #5b5b62;
+  --icon: #949397;
+  --play-icon: #c4aff2;
+  --input-gradient: linear-gradient(to left, #b2bcff, #fbb7ff, #e28be8);
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  font-family: 'Oxygen', sans-serif;
+}
+ion-icon {
+  font-size: 1.5em;
+  color: var(--icon);
+}
+#play {
+  font-size: 2.3em;
+  color: var(--play-icon);
+}
+#add {
+  font-size: 2em;
+}
+h, p {
+  margin:0;
+  padding:0;
+  text-transform: capitalize;
+}
+h {
+  color: var(--h);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+p, p1 {
+  color: var(--p);
+  font-weight: 600;
+  font-size: 1em;
+}
+p1 {
+  font-size: 0.9em;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 450px;
+  width: 300px;
+  border-radius: 10px;
+  background: var(--app-bg);
+  box-shadow:  7px 7px 14px #14141a,
+             -7px -7px 14px #1a1a24;
+}
+header {
+  height: 8vh;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.thumbnail {
+  height: 230px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 5px 20px -1px var(--play-icon);
+}
+.now-playing {
+  width: 200px;
+  height: 13vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.controls {
+  width: 200px;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#ct, #dt {
+  color: var(--p);
+  font-size: 0.8em;
+  width: 30px;
+}
+footer {
+   width: 150px;
+   height: 8vh;
+   background: var(--footer-bg);
+  color: var(--p);
+   border-top-left-radius: 100px; 
+   border-top-right-radius: 100px; 
+   border-bottom: 0;
+   margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 70%;
+  height: 5px;
+  outline: none;
+  margin:0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--input-gradient);
+  border-radius: 5px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 1px #000000;
+  border: 0px solid #000000;
+  height: 5px;
+  width: 20px;
+  border-radius: 1px;
+  background: #5b5b62;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--input-gradient);
+}
+input[type=range]::-moz-range-track {
+  width: 70%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: var(--input-gradient);
+  border-radius: 5px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 1px #000000;
+  border: 0px solid #000000;
+  height: 10px;
+  width: 20px;
+  border-radius: 1px;
+  background: #5b5b62;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 70%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #353739;
+  border: 0px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #353739;
+  border: 0px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 1px #000000;
+  border: 0px solid #000000;
+  height: 10px;
+  width: 20px;
+  border-radius: 1px;
+  background: #5b5b62;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #353739;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #353739;
+}
+
+@media screen and (max-width: 600px)
+{
+  .app {
+    min-height: 100vh;
+    min-width: 100vw;
+    border-radius: 0;
+  }
+  ion-icon {
+    font-size: 2em;
+  }
+  .thumbnail {
+    height: 300px;
+    width: 300px;
+  }
+  footer {
+    width: 70vw;
+    bottom:0;
+  }
+}
